@@ -1,0 +1,37 @@
+---
+import * as childProcess from "child_process";
+
+const hash = childProcess.execSync("git rev-parse HEAD").toString().trim();
+const GITHUB_LINK = `https://github.com/tailstory/tailstory.dev/commit/${hash}`;
+---
+
+<footer>
+    <span><a href={GITHUB_LINK}>{hash}</a></span>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    footer a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
