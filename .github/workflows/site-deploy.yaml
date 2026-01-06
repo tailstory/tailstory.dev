@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout repository"
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           fetch-depth: 0
 
       - name: "Install, build, and upload your site"
-        uses: withastro/action@32474c4384d86fc69c1739a9cddc665769fb88b5 # v4.2.0
+        uses: withastro/action@fd83e9d976da29fe29a0cc268443b7203c18f9ba # v5.0.2
 
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
