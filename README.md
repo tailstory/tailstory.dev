@@ -1,2 +1,1 @@
-# tailstory.dev
-Our website
+# Our website
