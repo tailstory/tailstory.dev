@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Tailstory LLC">
     <main>
-        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="logo" role="img" aria-label="Tailstory logo"></div>
         <h1>Tailstory</h1>
         <p class="tagline">No dropped balls. No chewed cables.</p>
         <nav>
@@ -27,9 +27,12 @@ import Layout from "../layouts/Layout.astro";
         padding: 2rem 1.5rem 4rem;
     }
 
-    .paw {
-        font-size: 2rem;
-        opacity: 0.35;
+    .logo {
+        width: clamp(80px, 15vw, 140px);
+        aspect-ratio: 1;
+        background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+        -webkit-mask: url('/logo.svg') center / contain no-repeat;
+        mask: url('/logo.svg') center / contain no-repeat;
     }
 
     h1 {
